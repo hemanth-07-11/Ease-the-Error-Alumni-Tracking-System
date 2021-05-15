@@ -27,8 +27,8 @@
 			</div>
 			
 			<div class="flex items-center space-x-1">
-				<a href="" class="py-5 px-3">Search</a>
-				<a href="" class="py-2 px-3 bg-blue-300 text-blue-900 hover:bg-blue-200 hover:text-blue-800 rounded transition duration-300">Home</a>
+				<a href="search.php" class="py-5 px-3">Search</a>
+				<a href="homepage.php" class="py-2 px-3 bg-blue-300 text-blue-900 hover:bg-blue-200 hover:text-blue-800 rounded transition duration-300">Home</a>
 			</div>
 		</div>
 	</div>

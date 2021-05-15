@@ -33,7 +33,7 @@
 ?>
 <div class="wrapper">
     <div class="left">
-        <img src="image.png" alt="user" width="250" height="250">
+        <img src="image/image.png" alt="user" width="250" height="250">
         <?php 
         	echo "<h4>".$user["username"]."</h4>";
 	        if( $row["yop"] < date("Y") )
