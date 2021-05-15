@@ -1,7 +1,7 @@
 <?php
     $hostname = "localhost";
     $username = "root";
-    $pwd = "yogeeswar";
+    $pwd = "";
     $db = "alumni_tracker";
 
     $conn = mysqli_connect($hostname, $username, $pwd, $db);

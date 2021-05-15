@@ -7,66 +7,7 @@
 	<title>chatbox</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	.element {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
-	body {
-	margin: 0 auto;
-	max-width: 800px;
-	padding: 0 20px;
-	}
-
-	.container {
-	border: 2px solid #dedede;
-	background-color:white;
-	color:black;
-	border-radius: 5px;
-	padding: 10px;
-	margin: 10px 0;
-	text-align:left;
-	}
-
-	.darker {
-	border-color: solid black;
-	background-color: green;
-	color:white;
-	text-align:right;
-	}
-
-	.container::after {
-	content: "";
-	clear: both;
-	display: table;
-	}
-		
-	.container img {
-	float: left;
-	max-width: 60px;
-	width: 100%;
-	margin-right: 20px;
-	border-radius: 50%;
-	}
-	
-	.container img.right {
-	float: right;
-	margin-left: 20px;
-	margin-right:0;
-	}	
-
-	.time-right {
-	float: right;
-	color: #aaa;
-	}
-	
-	.time-left {
-	float: left;
-	color: #999;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="./css/build/styles.css">
 
 		<!--includes jquery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -83,10 +24,10 @@
 						var dat = JSON.parse( data );
 						for( i=2;i<dat.length;i++) {
 							if ( dat[i].sender_id == dat[0]) {
-							$("#newdata").append("<div class='darker container'>"+dat[i].msg+"<br>"+dat[i].time+"</div>");
+							$("#newdata").append("<div class='flex flex-row-reverse m-5 '><div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'>R	</div><div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
 							}
 							if ( dat[i].sender_id == dat[1]) {
-							$("#newdata").append("<div class='container'>"+dat[i].msg+"<br>"+dat[i].time+"</div>");
+							$("#newdata").append("<div class='flex flex-row m-5'><div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'>R</div><div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
 							}
 						}
 					},
@@ -120,7 +61,9 @@
 			}
 		</script>
 	</head>
-	<body>
+	<body class="p-20 pt-10 lg:pt-14 lg:px-24">
+	
+
 <?php
 	include_once 'db_conn.php';
 	
@@ -153,13 +96,36 @@
 	
 //diplaying the msg based on whether it is sent or recived
 	
-	echo "<div style=background-color:red>";
+echo "<div class='font-serif text-2xl lg:text-4xl'>
+		<h1>Person name</h1>
+	  </div>";
+	echo "<div style='height:36rem;' class='bg-gray-100 overflow-auto h-96'>";
+	
 	while($resultrow= mysqli_fetch_array($msgresult,MYSQLI_ASSOC)) {
 		if($resultrow["sender_id"]==$_SESSION["usr_id"]) {
-			 echo "<div class='darker container'  >".$resultrow["msg"]."<br>".$resultrow["time"]."</div>";
-		}
+			 echo "<div class='flex flex-row-reverse m-5 '>
+			 		<div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'>
+					 R	
+					 </div>
+					 <div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'>
+					 	<p class='text-md lg:text-lg'>".$resultrow["msg"]."</p>
+						 <p class='float-right text-sm font-sans mt-2 tracking-wider'>".$resultrow["time"]."</p>
+					 </div>
+
+			 		</div>
+			 ";		
+			}
 		else {
-			echo "<div class='container' >".$resultrow["msg"]."<br>".$resultrow["time"]."</div>";
+			echo "<div class='flex flex-row m-5'>
+			<div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'>
+			R	
+			</div>
+			<div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'>
+				<p class='text-md lg:text-lg'>".$resultrow["msg"]."</p>
+				<p class='float-right text-sm font-sans mt-2 tracking-wider'>".$resultrow["time"]."</p>
+			</div>
+
+			</div>";
 		}
 	}
 	//echo "<div style=float:right;background-color:grey;color:white id=yourmsg></div>";
@@ -169,12 +135,21 @@
  
  <!-- new msg are diaplayed here using the newmsg() function-->
  <p id="newdata"></p>
- <div class= "element">
- <div style="">
- <form class="container" method="POST">
-		<textarea name="msg" id="msg" placeholder ="Type your message" rows="3" cols="100"></textarea>
-		<input type="button" value="send" onclick="sendmsg()"></div></div>
- </form>
  </div>
+ <div class= "element">
+
+ <form class="" method="POST">
+		<div class="flex flex-row fixed inset-x-0 w-full p-20 pt-10 lg:pt-14 lg:px-24 -bottom-16">
+			<textarea class="bg-red-600 w-full font-serif px-2 " name="msg" id="msg" placeholder ="Type your message"></textarea>
+			<div class="">
+				<button class="bg-gray-50 w-16 h-12 border border-5 py-2 px-6 rounded inline-flex items-center" value="" onclick="sendmsg()">
+					<i class="fas fa-arrow-alt-circle-right"></i>
+				</button>
+			</div>
+		</div>
+		
+ </form>
+
  </body>
+ <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
  </html>
