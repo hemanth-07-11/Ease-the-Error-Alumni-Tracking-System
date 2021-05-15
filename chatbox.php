@@ -24,10 +24,10 @@
 						var dat = JSON.parse( data );
 						for( i=2;i<dat.length;i++) {
 							if ( dat[i].sender_id == dat[0]) {
-							$("#newdata").append("<div class='flex flex-row-reverse m-5 '><div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'>R	</div><div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
+							$("#newdata").append("<div class='flex flex-row-reverse m-5 '><div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'></div><div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
 							}
 							if ( dat[i].sender_id == dat[1]) {
-							$("#newdata").append("<div class='flex flex-row m-5'><div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'>R</div><div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
+							$("#newdata").append("<div class='flex flex-row m-5'><div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'></div><div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
 							}
 						}
 					},
@@ -78,6 +78,10 @@
 	//user_id is sender_id 
 	//user_id is present in $_SESSION["usr_id"]
 	$_SESSION["reciver_id"]=$_GET['rtno'];
+	$sql2 = "select username from users where user_id=".$_SESSION["reciver_id"];
+	$result2 = mysqli_query($conn, $sql2);
+	$row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+
 
 //selecting msg between user1 and user2
 //there are two cases 
@@ -96,8 +100,8 @@
 	
 //diplaying the msg based on whether it is sent or recived
 	
-echo "<div class='font-serif text-2xl lg:text-4xl'>
-		<h1>Person name</h1>
+echo "<div class='font-serif text-2xl lg:text-4xl capitalize'>
+		<h1>".$row2["username"]."</h1>
 	  </div>";
 	echo "<div style='height:36rem;' class='bg-gray-100 overflow-auto h-96'>";
 	
@@ -105,7 +109,7 @@ echo "<div class='font-serif text-2xl lg:text-4xl'>
 		if($resultrow["sender_id"]==$_SESSION["usr_id"]) {
 			 echo "<div class='flex flex-row-reverse m-5 '>
 			 		<div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'>
-					 R	
+					 	
 					 </div>
 					 <div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'>
 					 	<p class='text-md lg:text-lg'>".$resultrow["msg"]."</p>
@@ -118,7 +122,7 @@ echo "<div class='font-serif text-2xl lg:text-4xl'>
 		else {
 			echo "<div class='flex flex-row m-5'>
 			<div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'>
-			R	
+				
 			</div>
 			<div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'>
 				<p class='text-md lg:text-lg'>".$resultrow["msg"]."</p>
