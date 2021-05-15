@@ -17,7 +17,7 @@
 		$_SESSION["usr_id"]=$r["user_id"];
 		$sql="update users set is_active=1 where user_id=\"".$_SESSION["usr_id"]."\"";
 		mysqli_query($conn,$sql);
-		header("location:profile.php");
+		header("location:homepage.php");
    	}
  
   	mysqli_close($conn);
