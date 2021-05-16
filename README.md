@@ -19,8 +19,10 @@ Developing an Alumni Tracking System.
 ## ABSTRACT OF THE PROJECT
 
 Two main sections of the project: 
-- Backend: Tech Stack used: PHP, AJAX, jQuery, MySQL 
-- Frontend: Tech Stack used: HTML, CSS, JavaScript, Tailwind CSS Framework (node js to be installed) 
+- Backend: Tech Stack used:  **PHP, AJAX, jQuery, MySQL**
+- Frontend: Tech Stack used: **HTML, CSS, JavaScript, Tailwind CSS Framework** (node js to be installed) 
+- Server : **XAMPP - Localhost**
+- Database: **Phpmyadmin - MySQL**
 
 Alumni Tracking System developed mainly in PHP, is an excellent solution for students joining the college or students pursuing their degree to track/find and contact the alumni of the college.
 Our solution will benefit the degree pursuing students who might need help or might find the need to contact a particular Alumni. This tracking system will also allow the students to better know about the alumni and also contact them via chat feature implemented in the project. 
@@ -39,18 +41,14 @@ In the working of the project, a user is allowed to register either as a student
 
 # Main Features of Project
 
-- Login / Register Page : Validation done at the client side using JavaScript for various input fields. Login page redirects to homepage.
+- **Login / Register Page** : Validation done at the client side using JavaScript for various input fields. Login page redirects to homepage.
 - Homepage: Has the links to most of the pages. Logout and Delete account features implemented. Delete account deletes the foreign key relations also (Trigger is written for the same) 
-- Search Feature : Student can search for an alumnus and vice versa. The search may be performed based on various filters like ‘Name’, ‘Department’, ‘Company’, ‘Area of Interests’. The most interesting feature is the search based on Area of interest. A student may search for an alumnus based on his/her area of interest so that the right resource person may be tracked or found using the Alumni Tracking System implemented. Users can perform search based on company or department so that their inter relationship may also be developed using the application. 
-- Chat Box Feature: Users can not only view the profile of others, but can also initiate a chat with anyone. The user can contact the required alumni for career advancement and the main feature is that, the user can contact the alumni at their free time, which is visible using the ‘users online’ option. Frequently contacted person list is available, hence the user can find if their friends are online with a single click.
-- Public post Feature: An extension of the chat box feature – Post sharing where a user can collectively post an info about a particular event or a job opening or intern opportunities or latest updaion in their field of interest, to all the users instead of sharing it privately to one person.
+- **Search Feature** : Student can search for an alumnus and vice versa. The search may be performed based on various filters like ‘Name’, ‘Department’, ‘Company’, ‘Area of Interests’. The most interesting feature is the search based on Area of interest. A student may search for an alumnus based on his/her area of interest so that the right resource person may be tracked or found using the Alumni Tracking System implemented. Users can perform search based on company or department so that their inter relationship may also be developed using the application. 
+- **Chat Box Feature**: Users can not only view the profile of others, but can also initiate a chat with anyone. The user can contact the required alumni for career advancement and the main feature is that, the user can contact the alumni at their free time, which is visible using the ‘users online’ option. Frequently contacted person list is available, hence the user can find if their friends are online with a single click.
+- **Public post Feature**: An extension of the chat box feature – Post sharing where a user can collectively post an info about a particular event or a job opening or intern opportunities or latest updaion in their field of interest, to all the users instead of sharing it privately to one person.
 
 ## Future Scope of the project 
-- Extension of Chat feature: Initiating a group chat with persons of similar interest.
-- Multimedia sharing option: Implement the image sharing option, so that users may share multimedia. A fine example would be, in case the student wants an approval or testing of the application from the alumni, he / she may send a working video and get approval or get it tested, through the chat box implemented here itself, since the main purpose of chat box is to eliminate the usage of any other platform for communication, that is to abstract sensitive info of alumnus from other users. 
+- **Extension of Chat feature**: Initiating a group chat with persons of similar interest.
+- **Multimedia sharing option** : Implement the image sharing option, so that users may share multimedia. A fine example would be, in case the student wants an approval or testing of the application from the alumni, he / she may send a working video and get approval or get it tested, through the chat box implemented here itself, since the main purpose of chat box is to eliminate the usage of any other platform for communication, that is to abstract sensitive info of alumnus from other users. 
 
 #### It is to be noted that all the code was written during the hackathon. 
-
-
-
-
