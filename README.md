@@ -24,7 +24,7 @@ Two main sections of the project:
 - Server : **XAMPP - Localhost**
 - Database: **Phpmyadmin - MySQL**
 - APIS USED: **Google Fonts, Heroicons , favicon**
-- DEVELOPMENT TOOLS USED: **Visual Studio Code** and XAMPP **Phymyadmin** for SQL commands
+- DEVELOPMENT TOOLS USED: **Visual Studio Code** for development and XAMPP **Phymyadmin** for SQL commands
 
 
 Alumni Tracking System developed mainly in PHP, is an excellent solution for students joining the college or students pursuing their degree to track/find and contact the alumni of the college.
