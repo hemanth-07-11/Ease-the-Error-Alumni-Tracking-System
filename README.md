@@ -1,3 +1,4 @@
+
 # Ease-the-Error-Alumni-Tracking-System
 This is a repo to submit team SCRIPT FLIPPERS' work for the Ease the Error 2.0 Hackathon
 
@@ -25,7 +26,6 @@ Two main sections of the project:
 - Database: **Phpmyadmin - MySQL**
 - APIS USED: **Google Fonts, Heroicons , favicon**
 - DEVELOPMENT TOOLS USED: **Visual Studio Code** for development and XAMPP **Phymyadmin** for SQL commands
-
 
 Alumni Tracking System developed mainly in PHP, is an excellent solution for students joining the college or students pursuing their degree to track/find and contact the alumni of the college.
 Our solution will benefit the degree pursuing students who might need help or might find the need to contact a particular Alumni. This tracking system will also allow the students to better know about the alumni and also contact them via chat feature implemented in the project. 
