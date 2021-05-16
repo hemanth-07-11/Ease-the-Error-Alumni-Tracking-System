@@ -14,9 +14,6 @@
                 }
             }
             var text = document.getElementById("searching").value;
-            //document.getElementById("displayrad").innerHTML = "Searching based on : "+option;
-            //document.getElementById("displaytext").innerHTML = "Searching for: "+text;
-            
             var datatosend = "text="+text+"&option="+option;
             console.log(datatosend);
             $("#search-result").text("");
@@ -29,40 +26,45 @@
             		var parse_data = JSON.parse(data);
             		console.log(parse_data);
             		for( i=0; i<parse_data.length;i++ ) {
-            			$("#search-result").append("<div style=background-color:red><h3>"+parse_data[i].username+"</h3><a href=\"profile_view.php?user_id="+parse_data[i].user_id+"\">profile</a><br><a href=\"chatbox.php?rtno="+parse_data[i].user_id+"\">chat</a></div>");
+            			$("#search-result").append("<div class='align'><h3>"+parse_data[i].username+"</h3><a href=\"profile_view.php?user_id="+parse_data[i].user_id+"\">profile</a><br><a href=\"chatbox.php?rtno="+parse_data[i].user_id+"\">chat</a></div><br>");
             		}
             	},
             });
   	}
  </script>
- </head>
- 
- <body>
-<h2> Perform Search based on </h2>
+ </head> 
+<body>
+<link rel="stylesheet" href="search.css">
+<div class="container">
+  <div class="wrapper">
+    <h2> Perform Search based on </h2>
+    <div class="text">
+    <div class="column">
+      <input type="radio" id="username" name="search" value="1">
+      <label for="1">Name</label></div>
+      
+      <div class="column">
+      <input type="radio" id="dept" name="search" value="2">
+      <label for="2">Department</label></div>
 
-  <input type="radio" id="username" name="search" value="1">
-  <label for="1">NAME</label><br>
-  
-  <input type="radio" id="dept" name="search" value="2">
-  <label for="2">Department</label><br>
+      <div class="column">
+      <input type="radio" id="company" name="search" value="3">
+      <label for="3">Company</label></div>
 
-  <input type="radio" id="company" name="search" value="3">
-  <label for="3">company</label><br>
+      <div class="column">
+      <input type="radio" id="rollno" name="search" value="4">
+      <label for="4">Rollno</label></div>
 
-  <input type="radio" id="rollno" name="search" value="4">
-  <label for="4">rollno</label><br>
-
-  <input type="radio" id="interest" name="search" value="5">
-  <label for="5">Areas of interest</label><br>
-
-<br>
-  <input type="text" id="searching" name="searching">
-<br>
-  <input type="submit" value="Submit" onclick="search()">
-
-
-<div id="displayrad"></div>
-<p id="displaytext"></p>
-<div id="search-result"></div>
- </body>
- </html>
+      <div class="column">
+      <input type="radio" id="interest" name="search" value="5">
+      <label for="5">Areas of interest</label></div>
+      <input type="text" id="searching"  name="searching"><br>
+    </div>
+    <div class="btn">
+    <input type="submit" value="Submit" class="btn" onclick="search()">
+    </div> 
+  </div>
+  <div id="search-result" ></div>
+</div>
+</body>
+</html>
