@@ -34,19 +34,8 @@
  </script>
  </head> 
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<link rel="stylesheet" href="style/search.css">
-=======
-<link rel="stylesheet" href="search.css">
->>>>>>> 6a463f6700491b078e6d527a78e3160f89767da1
-=======
 
 <link rel="stylesheet" href="style/search.css">
-
-<link rel="stylesheet" href="search.css">
-
->>>>>>> trail_push_all
 <div class="container">
   <div class="wrapper">
     <h2> Perform Search based on </h2>
