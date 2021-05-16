@@ -5,7 +5,7 @@
 	font-family:Times NEW Roman;
 }
 body{
-	background-color:white;
+	background: linear-gradient(to left, #77c9d4, #57bc90);
 	background-position:center;
 	background-size:cover;
 	overflow-x:hidden;
@@ -15,7 +15,7 @@ body{
 .nav-bar{
 	display:flex;
 	padding:20px 20px;
-	background-color: #00ffff;
+	background-color:white;
 	
 }
 .nav-logo img{
@@ -43,7 +43,7 @@ body{
 	content:'';
 	width:0;
 	height:2px;
-	background:red;
+	background:#64fdf2;
 	display:block;
 	margin:auto;
 	transition:.5s;

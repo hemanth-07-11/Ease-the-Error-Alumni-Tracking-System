@@ -24,10 +24,10 @@
 						var dat = JSON.parse( data );
 						for( i=2;i<dat.length;i++) {
 							if ( dat[i].sender_id == dat[0]) {
-							$("#newdata").append("<div class='flex flex-row-reverse m-5 '><div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'></div><div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
+							$("#newdata").append("<div class='flex flex-row-reverse m-5 '><div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'></div><div class='bg-gray-100 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
 							}
 							if ( dat[i].sender_id == dat[1]) {
-							$("#newdata").append("<div class='flex flex-row m-5'><div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'></div><div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
+							$("#newdata").append("<div class='flex flex-row m-5'><div class='bg-blue-500 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'></div><div style='background:#abe0e7;' class='w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'><p class='text-md lg:text-lg'>"+dat[i].msg+"</p><p class='float-right text-sm font-sans mt-2 tracking-wider'>"+dat[i].time+"</p></div></div>");
 							}
 						}
 					},
@@ -61,7 +61,7 @@
 			}
 		</script>
 	</head>
-	<body class="p-20 pt-10 lg:pt-14 lg:px-24">
+	<body style="background: linear-gradient(to left, #77c9d4, #57bc90);" class="p-20 pt-10 lg:pt-14 lg:px-24">
 	
 
 <?php
@@ -100,10 +100,10 @@
 	
 //diplaying the msg based on whether it is sent or recived
 	
-echo "<div class='font-serif text-2xl lg:text-4xl capitalize'>
+echo "<div class='font-serif text-2xl lg:text-4xl tracking-wider font-semibold uppercase text-white'>
 		<h1>".$row2["username"]."</h1>
 	  </div>";
-	echo "<div style='height:36rem;' class='bg-gray-100 overflow-auto h-96'>";
+	echo "<div style='height:36rem;' class='bg-white overflow-auto h-96'>";
 	
 	while($resultrow= mysqli_fetch_array($msgresult,MYSQLI_ASSOC)) {
 		if($resultrow["sender_id"]==$_SESSION["usr_id"]) {
@@ -111,7 +111,7 @@ echo "<div class='font-serif text-2xl lg:text-4xl capitalize'>
 			 		<div class='bg-blue-500 ml-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tl-2xl rounded-bl-2xl font-semibold mt-3'>
 					 	
 					 </div>
-					 <div class='bg-gray-50 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'>
+					 <div class='bg-gray-100 w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tr-xl rounded-xl mt-3 mb-3'>
 					 	<p class='text-md lg:text-lg'>".$resultrow["msg"]."</p>
 						 <p class='float-right text-sm font-sans mt-2 tracking-wider'>".$resultrow["time"]."</p>
 					 </div>
@@ -121,10 +121,10 @@ echo "<div class='font-serif text-2xl lg:text-4xl capitalize'>
 			}
 		else {
 			echo "<div class='flex flex-row m-5'>
-			<div class='bg-yellow-200 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'>
+			<div class='bg-blue-500 mr-2 text-lg h-9 w-9 lg:h-12 lg:w-12 flex items-center justify-center p-3 rounded-tr-2xl rounded-br-2xl font-semibold mt-3'>
 				
 			</div>
-			<div class='bg-indigo-300  w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'>
+			<div style='background:#abe0e7;' class=' w-9/12 lg:w-5/12 pt-1 pl-2 pb-1 rounded-tl-xl rounded mt-3 mb-3'>
 				<p class='text-md lg:text-lg'>".$resultrow["msg"]."</p>
 				<p class='float-right text-sm font-sans mt-2 tracking-wider'>".$resultrow["time"]."</p>
 			</div>
@@ -144,9 +144,9 @@ echo "<div class='font-serif text-2xl lg:text-4xl capitalize'>
 
  <form class="" method="POST">
 		<div class="flex flex-row fixed inset-x-0 w-full p-20 pt-10 lg:pt-14 lg:px-24 -bottom-16">
-			<textarea class="bg-red-600 w-full font-serif px-2 " name="msg" id="msg" placeholder ="Type your message"></textarea>
+			<textarea class="bg-white w-full font-serif px-2 text-grey-400 " name="msg" id="msg" placeholder ="Type your message"></textarea>
 			<div class="">
-				<button class="bg-gray-50 w-16 h-12 border border-5 py-2 px-6 rounded inline-flex items-center" value="" onclick="sendmsg()">
+				<button class="bg-blue-500 w-16 h-12 border border-5 py-2 px-6 rounded inline-flex items-center text-white" value="" onclick="sendmsg()">
 					<i class="fas fa-arrow-alt-circle-right"></i>
 				</button>
 			</div>

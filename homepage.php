@@ -57,10 +57,10 @@
   position: relative;
   left:0px;
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
+  background:whitesmoke ; /* Black background with 0.5 opacity */
+  color: black;
   padding: 20px;
-
+  opacity: 0.8;
   width:100%
 }
 
@@ -89,9 +89,10 @@ transition:0.8s;
 .btn:hover::before{
 height:100%;}
 .but1{
-background:yellow;
+background:#4a8ec4;
 left:200px;
 float:right;
+color:white;
 }
 
 footer{
@@ -275,16 +276,16 @@ font-size:15px;
   <div class="column">
     <div class="pic">&nbsp
     <img src="image/apj.jpg" alt="Snow" style="width:75%" >
-	    <div class="bottom-left">APJ ABDUL KALAM</div>
+	    
 	</div>
   </div>
   <div class="column">&nbsp
     <img src="image/sivan.jpg" alt="Forest" style="width:80%">
-	    <div class="centered">Dr.K.SIVAN</div>
+	    
   </div>
   <div class="column">
     <img src="image/suja.jpg" alt="Mountains" style="width:101%">
-	    <div class="top-right">SUJATHA RANGARAJAN</div>
+	    
   </div>
 </div>
 <br>
