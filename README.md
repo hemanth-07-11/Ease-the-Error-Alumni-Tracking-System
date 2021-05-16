@@ -1,3 +1,4 @@
+<div style="text-align: right"> 
 # Ease-the-Error-Alumni-Tracking-System
 This is a repo to submit team SCRIPT FLIPPERS' work for the Ease the Error 2.0 Hackathon
 
@@ -52,3 +53,5 @@ In the working of the project, a user is allowed to register either as a student
 - **Multimedia sharing option** : Implement the image sharing option, so that users may share multimedia. A fine example would be, in case the student wants an approval or testing of the application from the alumni, he / she may send a working video and get approval or get it tested, through the chat box implemented here itself, since the main purpose of chat box is to eliminate the usage of any other platform for communication, that is to abstract sensitive info of alumnus from other users. 
 
 #### It is to be noted that all the code was written during the hackathon. 
+
+ </div>
