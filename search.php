@@ -34,11 +34,11 @@
  </script>
  </head> 
 <body>
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="style/search.css">
-=======
+
 <link rel="stylesheet" href="search.css">
->>>>>>> origin/main
+
 <div class="container">
   <div class="wrapper">
     <h2> Perform Search based on </h2>
