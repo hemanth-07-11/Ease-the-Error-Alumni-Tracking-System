@@ -1,4 +1,4 @@
-<div style="text-align: right"> 
+
 # Ease-the-Error-Alumni-Tracking-System
 This is a repo to submit team SCRIPT FLIPPERS' work for the Ease the Error 2.0 Hackathon
 
@@ -54,4 +54,4 @@ In the working of the project, a user is allowed to register either as a student
 
 #### It is to be noted that all the code was written during the hackathon. 
 
- </div>
+
