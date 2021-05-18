@@ -142,7 +142,7 @@ echo "<div class='font-serif text-2xl lg:text-4xl tracking-wider font-semibold u
  </div>
  <div class= "element">
 
- <form class="" method="POST">
+
 		<div class="flex flex-row fixed inset-x-0 w-full p-20 pt-10 lg:pt-14 lg:px-24 -bottom-16">
 			<textarea class="bg-white w-full font-serif px-2 text-grey-400 " name="msg" id="msg" placeholder ="Type your message"></textarea>
 			<div class="">
@@ -152,7 +152,7 @@ echo "<div class='font-serif text-2xl lg:text-4xl tracking-wider font-semibold u
 			</div>
 		</div>
 		
- </form>
+ 
 
  </body>
  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>

@@ -4,7 +4,6 @@
       $file_name = $_FILES['image']['name'];
       $file_size =$_FILES['image']['size'];
       $file_tmp =$_FILES['image']['tmp_name'];
-      echo $file_tmp."	";
       $file_type=$_FILES['image']['type'];
       $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
       
@@ -19,7 +18,7 @@
       }
       
       if(empty($errors)==true){
-         if( move_uploaded_file($file_tmp,"./profile_imgs/".$file_name) )
+         if( move_uploaded_file($file_tmp,"/home/yogeeswar/projects/Ease-the-Error-Alumni-Tracking-System/profile_imgs/".$file_name) )
          	echo "Success";
          else {
          	echo "not working<br>";

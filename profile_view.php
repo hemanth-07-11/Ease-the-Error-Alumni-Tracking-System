@@ -33,8 +33,8 @@
 ?>
 <div class="wrapper">
     <div class="left">
-        <img src="image/image.png" alt="user" width="250" height="250">
         <?php 
+        	echo "<img src=\"profile_imgs/".$user["image_name"]."\" alt=\"user\" width=\"250\" height=\"250\">";
         	echo "<h4>".$user["username"]."</h4>";
 	        if( $row["yop"] < date("Y") )
          		echo "<p>Alumni</p>";

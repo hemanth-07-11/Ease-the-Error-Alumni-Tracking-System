@@ -250,7 +250,7 @@ font-size:15px;
 <body>
 	 <div class="nav-bar">
 	     <div class="nav-logo">
-		     <img src="logo.jpeg">
+	     		<?php echo "<img src=\"profile_imgs/".$_SESSION["usr_img"]."\">"; ?>
 		 </div>
 		 <div class="nav-links">
 		    <ul>

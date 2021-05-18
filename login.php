@@ -15,6 +15,7 @@
    	else {
     		$r=mysqli_fetch_array($result,MYSQLI_ASSOC);
 		$_SESSION["usr_id"]=$r["user_id"];
+		$_SESSION["usr_img"]=$r["image_name"];
 		$sql="update users set is_active=1 where user_id=\"".$_SESSION["usr_id"]."\"";
 		mysqli_query($conn,$sql);
 		header("location:homepage.php");
