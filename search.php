@@ -25,8 +25,13 @@
             	success: function(data) {
             		var parse_data = JSON.parse(data);
             		console.log(parse_data);
-            		for( i=0; i<parse_data.length;i++ ) {
-            			$("#search-result").append("<div class='align'><h3>"+parse_data[i].username+"</h3><a href=\"profile_view.php?user_id="+parse_data[i].user_id+"\">profile</a><br><a href=\"chatbox.php?rtno="+parse_data[i].user_id+"\">chat</a></div><br>");
+            		if( parse_data[0] == "" ){
+            			$("#search-result").append("no search results found");
+            		}
+            		else{
+            			for( i=0; i<parse_data.length;i++ ) {
+            				$("#search-result").append("<div class='align'><h3>"+parse_data[i].username+"</h3><a href=\"profile_view.php?uid="+parse_data[i].user_id+"\">profile</a><br><a href=\"chatbox.php?rtno="+parse_data[i].user_id+"\">chat</a></div><br>");
+            			}
             		}
             	},
             });

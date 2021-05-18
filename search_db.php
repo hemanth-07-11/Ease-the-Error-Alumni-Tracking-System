@@ -6,7 +6,7 @@
 	
 	switch( $radio ) {
 		case '1' :
-			$sql = "select user_id,username from users where username=$text'";	
+			$sql = "select user_id,username from users where username='$text'";	
 			break;
 		case '2': 
 			$sql = "select user_id,username from users where Department='$text'";
@@ -18,7 +18,7 @@
 			$sql = "select user_id,username from users where roll_no=$text";
 			break;
 		case '5':
-			$sql = "select u.user_id,u.username from users u join interest inte where u.user_id = inte.user_id and interest='$text'";
+			$sql = "select u.user_id,u.username from users u join interest inte where u.user_id = inte.user_id and interest like '%$text%'";
 			break;
 	}
 	
